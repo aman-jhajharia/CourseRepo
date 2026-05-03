@@ -1,0 +1,294 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #000;
+  border-bottom: 2px solid var(--neon-cyan);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--font-pixel);
+  font-size: 2.5rem;
+  color: var(--acid-green);
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px var(--acid-purple);
+}
+
+.logo span {
+  color: var(--neon-red);
+  text-shadow: 2px 2px 0px var(--neon-cyan);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  font-family: var(--font-bold);
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  border: 1px dashed transparent;
+  padding: 0.25rem 0.5rem;
+}
+
+.navLink:hover {
+  color: var(--warn-yellow);
+  border-color: var(--warn-yellow);
+  background: #111;
+}
+
+/* Paper Card - Controlled Chaos inside */
+.paperCard {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  background: var(--bg-secondary);
+  border: 2px solid #333;
+  transition: all 0.2s;
+}
+
+.paperCard:hover {
+  border-color: var(--acid-green);
+  box-shadow: 4px 4px 0px var(--acid-purple), -4px -4px 0px var(--neon-cyan);
+}
+
+/* Folder tab aesthetic */
+.paperCard::before {
+  content: 'FILE.PDF';
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  background: var(--acid-green);
+  color: #000;
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  padding: 0 8px;
+  border: 1px solid #000;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.paperTitle {
+  font-family: var(--font-bold);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.paperSubject {
+  font-family: var(--font-meme);
+  font-size: 1.2rem;
+  color: var(--neon-cyan);
+}
+
+.badge {
+  background: var(--acid-purple);
+  color: var(--acid-green);
+  border: 2px solid var(--acid-green);
+  padding: 0.25rem 0.5rem;
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.badge.endterm {
+  background: var(--neon-red);
+  color: var(--warn-yellow);
+  border-color: var(--warn-yellow);
+}
+
+.badge.assignment {
+  background: var(--warn-yellow);
+  color: #000;
+  border-color: #000;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.metaInfo {
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  color: #888;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.downloadBtn {
+  color: #000;
+  background: var(--acid-green);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-bold);
+  font-size: 1rem;
+  font-weight: 800;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px var(--acid-purple);
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+}
+
+.downloadBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.installingText {
+  color: var(--warn-yellow);
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  background: var(--bg-secondary);
+  border: 2px dashed #444;
+}
+
+.filterGroup {
+  margin-bottom: 1.5rem;
+}
+
+.filterLabel {
+  display: block;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 0.75rem;
+  background: #000;
+  border: 2px solid #333;
+  color: var(--acid-green);
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+  appearance: none;
+}
+
+.selectInput:focus {
+  border-color: var(--acid-purple);
+}
+
+/* Page Layouts */
+.homeHero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.heroTitle {
+  font-family: var(--font-pixel);
+  font-size: 6rem;
+  color: var(--neon-cyan);
+  text-shadow: 5px 5px 0px var(--neon-red), -3px -3px 0px var(--acid-purple);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.heroSubtitle {
+  font-family: var(--font-meme);
+  font-size: 1.5rem;
+  color: #000;
+  background: var(--acid-green);
+  padding: 0.5rem 1rem;
+  border: 3px solid #000;
+  transform: rotate(-2deg);
+  margin-bottom: 3rem;
+  box-shadow: 4px 4px 0px var(--acid-purple);
+}
+
+.heroActions {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Section = Clean Grid */
+.papersContainer {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.papersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .papersContainer {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+}
+
+.adminContainer {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  border-top: 2px dashed #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-pixel);
+  color: #666;
+  margin-top: 2rem;
+}
+
+.adminLink {
+  color: #333;
+  transition: color 0.2s;
+}
+
+.adminLink:hover {
+  color: var(--neon-red);
+}
