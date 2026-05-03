@@ -14,7 +14,7 @@ export default function AdminLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
-
+    // ddfdfd
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
       const res = await fetch(`${apiUrl}/api/auth/login`, {
@@ -40,8 +40,8 @@ export default function AdminLogin() {
 
   return (
     <div className="main-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <motion.div 
-        className="glass" 
+      <motion.div
+        className="glass"
         style={{ padding: '2rem', maxWidth: '400px', width: '100%', marginTop: '4rem' }}
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -50,26 +50,26 @@ export default function AdminLogin() {
         <h2 style={{ fontFamily: 'var(--font-retro)', fontSize: '2.5rem', marginBottom: '1.5rem', textAlign: 'center', color: 'var(--accent-pink)' }}>
           SYSTEM.LOGIN
         </h2>
-        
+
         {error && <div style={{ background: 'var(--accent-yellow)', color: 'red', padding: '0.5rem', marginBottom: '1rem', border: 'var(--border-hard)', fontFamily: 'var(--font-retro)' }}>{error}</div>}
 
         <form onSubmit={handleLogin}>
           <div style={{ marginBottom: '1rem' }}>
             <label style={{ fontFamily: 'var(--font-retro)', fontSize: '1.2rem', display: 'block', marginBottom: '0.5rem' }}>Username:</label>
-            <input 
-              type="text" 
-              className="input-field" 
+            <input
+              type="text"
+              className="input-field"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
             />
           </div>
-          
+
           <div style={{ marginBottom: '1.5rem' }}>
             <label style={{ fontFamily: 'var(--font-retro)', fontSize: '1.2rem', display: 'block', marginBottom: '0.5rem' }}>Password:</label>
-            <input 
-              type="password" 
-              className="input-field" 
+            <input
+              type="password"
+              className="input-field"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
