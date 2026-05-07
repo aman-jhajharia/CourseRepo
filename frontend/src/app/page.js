@@ -24,7 +24,7 @@ export default function Home() {
           animate={{ rotate: -2, scale: 1 }}
           transition={{ delay: 0.3, type: 'spring' }}
         >
-          _Seniors sharing PDFs at 3 AM. 📁 Do not distribute.
+          _Optimization for CS and _Environment Studies Paper are live now!
         </motion.p>
         
         <motion.div 
