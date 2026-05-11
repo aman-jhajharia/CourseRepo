@@ -24,7 +24,7 @@ export default function Home() {
           animate={{ rotate: -2, scale: 1 }}
           transition={{ delay: 0.3, type: 'spring' }}
         >
-          Programming II (C), _Operating System, Essentials of Business Management, Digital Electronics, and _Environment Studies Paper are live now!
+          Programming II (C), _Operating System, Essentials of Business Management, and Digital Electronics Paper are live!
         </motion.p>
         
         <motion.div 
