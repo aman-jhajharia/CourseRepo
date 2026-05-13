@@ -24,7 +24,7 @@ export default function Home() {
           animate={{ rotate: -2, scale: 1 }}
           transition={{ delay: 0.3, type: 'spring' }}
         >
-          Programming II (C), _Operating System, and Digital Electronics Paper are live!
+          Programming II (C) & Design and Analysis of Algorithm (DAA) Paper are live!
         </motion.p>
         
         <motion.div 
